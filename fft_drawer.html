@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>SVG Drawing</title>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="projects/fft_drawer/draw_mountain.js"></script>
+    <script src="projects/fft_drawer/fft.js"></script>
+    <script src="projects/fft_drawer/svg2dat.js"></script>
+  </head>
+  <style>
+body {
+  background-color: #F5F5F5;
+}
+  </style>
+
+  <body>
+
+    <h1 style="text-align:center; margin-top: 80px; margin-bottom: 30px; font-weight: bold;">SVG Drawing</h1>
+
+    <div id="navbar">
+      <a href="index.html">Home</a>
+    </div>
+
+    <div class="container">
+
+      <div class="row justify-content-md-center">
+        <div class="col-sm-12">
+          <p>This project was sparked by an interesting video explaining the Fourier Transform in conceptual terms by 3Blue1Brown, <a href="https://www.youtube.com/watch?v=r6sGWTCMz2k" target="_blank">here</a>. Any function can be written as a sum of sinusoids, and for many functions it is an infinite sum. We can, however truncate the infinite sum to something reasonable(~32-128 terms) and get a very accurate representation. Sinusoidal functions can also be represented by a rotating circle, as we all learned in a pre-calc class. Combining these two facts we can draw out arbitrary functions as sums of rotating circles. This projects started with the simple 1D case of drawing a square wave, and the final product can convert SVG files into these very intriguing animations. I wrote all of the code for this project in JavaScript, which was a language that I had never used before. I leveraged p5js for its amazing graphics capabilities and a prebuilt fft library.</p>
+        </div>
+      </div>
+
+      <div class="row justify-content-md-center">
+        <div class="col-sm-6" >
+          <div id="fft_square_wave"></div>
+        </div>
+        <div class="col-sm-4" style="background-color:rbga(255,0,0,0.5)">
+          <h3 style="font-weight: bold; text-align:center;">Square Wave</h3>
+          <p>A square wave is traced out by the sum of many rotating circles. As we only care about the y-component(or x-component) of the sum, a line is drawn horizontally from the smallest circle to show the function.
+        </div>
+      </div>
+
+      <div class="row justify-content-md-center">
+        <div class="col-sm-6" >
+          <div id="fft_ellipse"></div>
+        </div>
+        <div class="col-sm-4" style="background-color:rbga(255,0,0,0.5)">
+          <h3 style="font-weight: bold; text-align:center;">Ellipse</h3>
+          <p>This was the very first 2D drawing that I did, and although quite simple it showed that more complex paths were feasable</p>
+        </div>
+      </div>
+
+      <div class="row justify-content-md-center">
+        <div class="col-sm-6" >
+          <div id="fft_square"></div>
+        </div>
+        <div class="col-sm-4" style="background-color:rbga(255,0,0,0.5)">
+          <h3 style="font-weight: bold; text-align:center;">Square</h3>
+          <p style="padding: 20px">This was another 2D path I did before creating an SVG parser and re-sampler. This was also pretty simple to make, but perhaps more impressive. I personally find it super cool to see how such a discontinuous shape can be approximated with reasonably accuracy with only 128 terms of an infinite series.</p>
+        </div>
+      </div>
+
+
+      <div class="row justify-content-md-center">
+        <div class="col-sm-6" >
+          <div id="fft_mountain"></div>
+        </div>
+        <div class="col-sm-4" style="background-color:rbga(255,0,0,0.5)">
+          <h3 style="font-weight: bold; text-align:center;">Generalized SVG Tracing</h3>
+          <p>The goal of this project was to be able to trace arbitrary closed paths given in SVG(Scalable Vector Graphics) format.</p>
+        </div>
+      </div>
+
+      <div class="row justify-content-md-center">
+        <p>  When first starting the project, I figured the hardest part would be understanding the fft well enough to convert its output to these rotating circles. Although I spent a lot of time learning more about the fft, this part of the project didn't take nearly as long as creating a routine to parse and resample an arbitrary svg. In order to get a useful result out of the fft we need to supply it uniformly spaced points. This is made somewhat easier by SVG's parameterized curve definitions, namely cubic splines and lines, but there were still many obstacles to overcome such as sampling over arc-length and parsing. Parsing was the most tedious part of this project, and isn't something I would do again. I learned a lot from this project and got to implement some cool methods like numerical integration, graphics and animation, and learned a lot about JavaScript!</p>
+
+      </div>
+    </div>
+
+
+    <script>
+      var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-60px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+
+    </script>
+
+  </body>
+</html>

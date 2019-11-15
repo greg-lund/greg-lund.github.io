@@ -1,0 +1,177 @@
+body, html {
+  height: 100%;
+}
+
+*{
+  font-family: roboto, helvetica, sans-serif;
+}
+.main {
+  background-image: url(style/portrait.jpg);
+
+  height: 100%;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax-window {
+  height: 100%;
+}
+
+.second {
+  background-image: url('tom_norway.jpg');
+
+  height: 100%;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.caption {
+  position: relative;
+  top: 80%;
+  width: 100%;
+  text-align: center;
+  color: 0;
+}
+
+.caption h1 {
+  font-weight: bold;
+  color: #fff;
+  padding: 18px;
+  font-size: 36px;
+}
+
+.first_layer {
+  height: 140%;
+  background-color: white;
+  font-size: 36px;
+}
+
+h1 {
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+}
+
+.col-sm-10 > p {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #50555C;
+}
+p {
+  margin-bottom: 10px;
+  margin-left: 10px;
+  font-size: 18px;
+  color: #50555C;
+}
+p a {
+  color: #3377CC;
+}
+
+p a:hover {
+  text-decoration: none;
+}
+.row {
+  margin: 20px;
+}
+
+.col-sm-4 {
+  /*background-color: rgba(86,61,124,.15);*/
+  margin: 20px;
+}
+
+.col-sm-6 {
+  /*background-color: rgba(255,0,0,.15);*/
+  margin: 20px;
+}
+
+img {
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.col-sm-4:hover {
+  cursor: pointer;
+}
+
+.col-sm-6 > a {
+  font-size: 24px;
+  color: #3377CC;
+}
+
+.col-sm-6 > a:hover {
+  color: rgba(0,100,255,0.65);
+  text-decoration: none;
+}
+
+.col-sm-6 > h3 {
+  font-size: 20px;
+  color: green;
+}
+
+.col-sm-6 > p {
+  font-size: 16px;
+  color: #50555C;
+}
+
+#navbar {
+  background-color: rgba(20,20,20,0.9);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: block;
+  transition: top 0.5s;
+  z-index: 999;
+  margin: 0 auto;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 17px;
+  transition:  0.5s ease;
+  margin-right:20px;
+}
+
+#navbar a:hover {
+  background-color: rgba(221,221,221,0.8);
+  color:black;
+}
+
+#navbar a.current {
+  background-color: rgba(221,221,221,0.8);
+  color: black;
+}
+
+#navbar h1 {
+  color:#f2f2f2;
+  text-align: center;
+  font-size: 24px;
+  padding: 15px;
+}
+
+.myCaption {
+  float: center;
+  font-size: 16px;
+  color: #50555C;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#fft_mountain {
+}
+
+canvas {
+  border-radius:15px;
+}

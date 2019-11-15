@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Greg Lund Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/bootstrap-social.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="scripts/parallax.js"></script>
+    <link rel="shortcut icon" href="images/gear.ico?" type="image/x-icon">
+  </head>
+  <body>
+
+    <!--
+      <div id="navbar">
+      <a class="current">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      </div>
+    -->
+
+    <div class="parallax-window" data-parallax="scroll" data-image-src="images/portrait.jpg" speed="0.5">
+      <div class="caption">
+        <h1>Greg Lund's Project Portfolio</h1>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="row justify-content-md-center">
+        <div class="col-sm-8">
+          <h1 style="font-weight:bold">Overview</h1>
+          <p>My name is Greg Lund. I am currently a Junior majoring in Mechanical Engineering and Computer Science at the University of Colorado Boulder. I am super interested in all things engineering, from mechanical design, electronics, and programming to aerospace and robotics. I really enjoy learning new skills, so I spend a lot of my free time pursuing personal projects that are way outside of my current scope of knowledge. This website is a way to showcase these projects. I have spent countless hours since high school teaching myself new skills like programming, CAD and CAM, soldering, electronics prototyping, machining, welding, woodworking and even masonry. Building this website from scratch, in HTML, has been a way for me to learn more about web development.    </p>
+        </div>
+      </div>
+      <div class="row justify-content-md-center">
+        <div class="col-sm-8">
+          <h1 style="font-weight:bold">My Recent Projects</h1>
+        </div>
+      </div>
+
+      <div class="row justify-content-md-center">
+        <div class="col-sm-4" onClick="window.open('fft_drawer.html','_top'); return false;">
+          <img src="projects/fft_drawer/fft_mountain.png" alt="">
+        </div>
+        <div class="col-sm-6">
+          <a href="fft_drawer.html">Drawing SVG Paths with Circles</a>
+          <h3>Summer 2019</h3>
+          <p>This project was mainly an exercise in teaching myself more about the Fourier Transform and its application on functions of 2 dimensions. This was also a great opportunity to learn how to code in JavaScript.</p>
+        </div>
+      </div>
+
+
+      <div class="row justify-content-md-center">
+        <div class="col-sm-4" onClick="window.open('cnc.html','_top'); return false;">
+          <img src="projects/cnc/cnc_front.JPG" alt="">
+        </div>
+        <div class="col-sm-6">
+          <a href="cnc.html">CNC Router</a>
+          <h3>Spring 2017</h3>
+          <p>This was one of the first large scale projects that I completed. The project took around 3-4 months with plenty of iteration, but the final product is a 3-axis CNC Router capable of cutting wood and plastics.</p>
+        </div>
+      </div>
+
+      <div class="row justify-content-md-center">
+        <div class="col-sm-4" onClick="window.open('printer.html','_top'); return false;">
+          <img src="projects/3d_printer/hypercube_front.JPG" onerror="this.onerror=null; this.src='image_not_found.png'" alt="">
+        </div>
+        <div class="col-sm-6">
+          <a href="printer.html">3D Printers</a>
+          <h3>2017-2018</h3>
+          <p>Over the course of the past two years I have built two 3D Printers from scratch. The first one was my design and worked suprisingly well. The second printer was made with 3D printed parts from the first and is not my design.</p>
+        </div>
+      </div>
+
+      <div class="row justify-content-md-center">
+        <div class="col-sm-4" onClick="window.open('turbine.html','_top'); return false;">
+          <img src="projects/tesla_turbine/turbine_cover.JPG" onerror="this.onerror=null; this.src='image_not_found.png'" alt="">
+        </div>
+        <div class="col-sm-6">
+          <a href="turbine.html">Tesla Turbine</a>
+          <h3>Spring 2017</h3>
+          <p>Building this turbine was my Senior Project in high school. I machined all the components on a cheap metal lathe and a drill press. The rotor and disks were made from steel while the casing is aluminum and the inlet is brass. Using compressed air the turbine can spin close to 100,000 rpm!</p>
+        </div>
+      </div>
+      <div class="row justify-content-md-center">
+        <div class="col-sm-8">
+          <h1 style="font-weight:bold; text-align:center">Contact Me</h1>
+        </div>
+      </div>
+      <div class="row justify-content-md-center">
+        <div class="col-sm-5">
+          <img src="images/capitol.JPG">
+        </div>
+        <div class="col-sm-5">
+          <p>Thanks for stopping by!</p>
+          <a class="btn btn-social-icon btn-github" href="https://www.github.com/grlu8224" target="blank">
+            <span class="fa fa-github"></span>
+          </a>
+          <a class="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/in/gregory-lund-963b6a173/" target="blank">
+            <span class="fa fa-linkedin"></span>
+          </a>
+
+
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <!--
+      <script>
+        var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-60px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+      </script>
+      -->
+  </body>
+</html>
+
+
