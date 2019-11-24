@@ -55,7 +55,7 @@ var mountain = function(p) {
     });
 
     //Create Viewing Area
-    p.createCanvas(400,400);
+    p.createCanvas(600,400);
 
   };
 
