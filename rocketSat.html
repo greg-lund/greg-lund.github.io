@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>RocketSat-X</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="images/gear.ico?v=2" type="image/x-icon">
+  </head>
+  <style>
+body {
+  background-color: #F5F5F5;
+}
+  </style>
+
+  <body>
+
+    <h1 style="text-align:center; margin-top: 80px; margin-bottom: 30px; font-weight: bold;">RocketSat-X</h1>
+
+    <div id="navbar">
+      <a href="index.html">Home</a>
+    </div>
+
+    <div class="container">
+      <div class="col-sm-7">
+
+        <div class="w3-content w3-display-container">
+          <img class="mySlides" src="projects/rocketSat/cad.png" style="width:100%; border-radius: 15px" alt="">
+          <video class="mySlides" style="width: 100%; border-radius: 15px" controls>
+            <source src="projects/rocketSat/Deployment.mp4" type="video/mp4">
+            Your browser does not support mp4
+          </video>
+          <img class="mySlides" src="projects/rocketSat/aluminum_panel.JPG" style="width:100%; border-radius: 15px" alt="">
+          <img class="mySlides" src="projects/rocketSat/aluminum_panel_assem.JPG" style="width:100%; border-radius: 15px" alt="">
+
+          <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+          <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        <h3 class="myCaption">This is our current CAD model of the payload. I desnigned the panel stack and sequencing pins and hinges.</h3>
+        <h3 class="myCaption">Here is a slow-motion video of a test deployment from this summer</h3>
+        <h3 class="myCaption">We are currently working on machining all of the panel stack components from aluminum. These two panels were machined by hand, and I spend around 3 hours in the shop finishing these up.</h3>
+        <h3 class="myCaption">Two of the aluminum panels with tape springs in between.</h3>
+      </div>
+
+      <div class="col-sm-5">
+        <h3 style="font-weight: bold; text-align:center;">About this project</h3>
+        <p>The goal of this project is to demonstrate the ability to sequence a passive solar array deployment. Our payload will be launched on a rocket from Wallops Flight Facility, to an elevation of around 150 km. At apogee we will deploy our panel stack on a linear rail system and the sequencing will begin. The panels will deploy one at a time, using only strain energy from the tape springs(currently cut up tape measures). </p>
+      </div>
+
+      <script>
+        var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-60px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var cap = document.getElementsByClassName("myCaption");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+    cap[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+  cap[slideIndex-1].style.display = "block";
+}
+      </script>
+
+    </div>
+  </body>
+</html>

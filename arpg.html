@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ARPG</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="images/gear.ico?v=2" type="image/x-icon">
+  </head>
+  <style>
+body {
+  background-color: #F5F5F5;
+}
+  </style>
+
+  <body>
+
+    <h1 style="text-align:center; margin-top: 80px; margin-bottom: 30px; font-weight: bold;">ARPG</h1>
+
+    <div id="navbar">
+      <a href="index.html">Home</a>
+    </div>
+
+    <div class="container">
+      <div class="col-sm-7">
+
+        <div class="w3-content w3-display-container">
+          <img class="mySlides" src="projects/arpg/assem.JPG" style="width:100%; border-radius: 15px" alt="">
+          <img class="mySlides" src="projects/arpg/radio_dropped.JPG" style="width:100%; border-radius: 15px" alt="">
+          <img class="mySlides" src="projects/arpg/radio_deployed.JPG" style="width:100%; border-radius: 15px" alt="">
+
+          <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+          <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        <h3 class="myCaption">A preliminary CAD view of a radio deployment system. There are three independent linear actuators that each hold a radio package. Each package includes a transmitter and telescoping antenna.</h3>
+        <h3 class="myCaption">A view of the proposed deployment. The package can be lowered down to the ground, and the pins on the fork released.</h3>
+        <h3 class="myCaption">A view of the final state of the package. The robot can be driven away while the antenna is raised.</h3>
+      </div>
+
+      <div class="col-sm-5">
+        <h3 style="font-weight: bold; text-align:center;">About this project</h3>
+        <p>As a Research Assistant in the Automated Robotics and Perception Group's lab, I work to support a team competing in this years DARPA Subterranean challenge. The first project I have been working on is to design and fabricate a system to deploy radio systems with extending antennas on an autonomous robot for use in the challenge.</p>
+      </div>
+
+      <script>
+        var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-60px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var cap = document.getElementsByClassName("myCaption");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+    cap[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+  cap[slideIndex-1].style.display = "block";
+}
+      </script>
+
+    </div>
+  </body>
+</html>
