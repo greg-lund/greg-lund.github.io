@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="projects/fft_drawer/draw_mountain.js"></script>
     <script src="projects/fft_drawer/fft.js"></script>
     <script src="projects/fft_drawer/svg2dat.js"></script>
     <link rel="shortcut icon" href="images/gear.ico?v=2" type="image/x-icon">
@@ -30,14 +29,14 @@ body {
     <div class="container">
 
       <div class="row justify-content-md-center">
-        <div class="col-sm-12">
-          <p>This project was sparked by an interesting video explaining the Fourier Transform in conceptual terms by 3Blue1Brown, <a href="https://www.youtube.com/watch?v=r6sGWTCMz2k" target="_blank">here</a>. Any function can be written as a sum of sinusoids, and for many functions it is an infinite sum. We can, however truncate the infinite sum to something reasonable(~32-128 terms) and get a very accurate representation. Sinusoidal functions can also be represented by a rotating circle, as we all learned in a pre-calc class. Combining these two facts we can draw out arbitrary functions as sums of rotating circles. This projects started with the simple 1D case of drawing a square wave, and the final product can convert SVG files into these very intriguing animations. I wrote all of the code for this project in JavaScript, which was a language that I had never used before. I leveraged p5js for its amazing graphics capabilities and a prebuilt fft library.</p>
+        <div class="col-sm-12" style="text-align: center">
+          <p>This project was sparked by an interesting video explaining the Fourier Transform in conceptual terms by 3Blue1Brown, <a href="https://www.youtube.com/watch?v=r6sGWTCMz2k" target="_blank">here</a>. The goal of this project was to be able to parse a Vector Graphics file(SVG) and draw it as a combination of rotating circles. I wrote the whole project in JavaScript, which was a language that I had never used before. I leveraged p5js, an amazing graphics library, and a prebuilt fft algorithm.</p>
         </div>
       </div>
 
       <div class="row justify-content-md-center">
         <div class="col-sm-6" >
-          <div id="fft_square_wave"></div>
+          <img src="projects/fft_drawer/square_wave.gif" alt="square wave">
         </div>
         <div class="col-sm-4" style="background-color:rbga(255,0,0,0.5)">
           <h3 style="font-weight: bold; text-align:center;">Square Wave</h3>
@@ -47,7 +46,7 @@ body {
 
       <div class="row justify-content-md-center">
         <div class="col-sm-6" >
-          <div id="fft_ellipse"></div>
+          <img src="projects/fft_drawer/ellipse.gif" alt="ellipse">
         </div>
         <div class="col-sm-4" style="background-color:rbga(255,0,0,0.5)">
           <h3 style="font-weight: bold; text-align:center;">Ellipse</h3>
@@ -57,7 +56,7 @@ body {
 
       <div class="row justify-content-md-center">
         <div class="col-sm-6" >
-          <div id="fft_square"></div>
+          <img src="projects/fft_drawer/square.gif" alt="square">
         </div>
         <div class="col-sm-4" style="background-color:rbga(255,0,0,0.5)">
           <h3 style="font-weight: bold; text-align:center;">Square</h3>
@@ -67,8 +66,8 @@ body {
 
 
       <div class="row justify-content-md-center">
-        <div class="col-sm-6" >
-          <div id="fft_mountain"></div>
+        <div class="col-sm-6">
+          <img src="projects/fft_drawer/mountain.gif" alt="mountain">
         </div>
         <div class="col-sm-4" style="background-color:rbga(255,0,0,0.5)">
           <h3 style="font-weight: bold; text-align:center;">Generalized SVG Tracing</h3>
@@ -78,6 +77,7 @@ body {
 
       <div class="row justify-content-md-center">
         <p style="text-align: center; margin: 25px">  When first starting the project, I figured the hardest part would be understanding the fft well enough to convert its output to these rotating circles. Although I spent a lot of time learning more about the fft, this part of the project didn't take nearly as long as creating a routine to parse and resample an arbitrary svg. In order to get a useful result out of the fft we need to supply it uniformly spaced points. This is made somewhat easier by SVG's parameterized curve definitions, namely cubic splines and lines, but there were still many obstacles to overcome such as sampling over arc-length and parsing. Parsing was the most tedious part of this project, and isn't something I would do again. I learned a lot from this project and got to implement some cool methods like numerical integration, graphics and animation, and learned a lot about JavaScript!</p>
+        <p style="text-align: center; margin: 25px">You can also check out the source code on my github repository, <a href="https://github.com/greg-lund/fft_svg_drawer" target="_blank">here</a>.</p>
 
       </div>
     </div>
