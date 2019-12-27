@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Component Design</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="images/gear.ico?v=2" type="image/x-icon">
+  </head>
+  <style>
+body {
+  background-color: #F5F5F5;
+}
+  </style>
+
+  <body>
+
+    <h1 style="text-align:center; margin-top: 80px; margin-bottom: 30px; font-weight: bold;">Component Design</h1>
+
+    <div id="navbar">
+      <a href="index.html">Home</a>
+    </div>
+
+    <div class="container">
+      <div class="col-sm-7">
+
+        <div class="w3-content w3-display-container">
+          <img class="mySlides" src="projects/comp_design/steel_tube.JPG" style="width:100%; border-radius: 15px" alt="">
+          <img class="mySlides" src="projects/comp_design/welded.JPG" style="width:100%; border-radius: 15px" alt="">
+          <img class="mySlides" src="projects/comp_design/welded_assem.JPG" style="width:100%; border-radius: 15px" alt="">
+          <img class="mySlides" src="projects/comp_design/sprocket.JPG" style="width:100%; border-radius: 15px" alt="">
+          <img class="mySlides" src="projects/comp_design/full_assem_floor.JPG" style="width:100%; border-radius: 15px" alt="">
+          <img class="mySlides" src="projects/comp_design/full_assem.JPG" style="width:100%; border-radius: 15px" alt="">
+          <!--
+          <video class="mySlides" controls>
+            <source src="projects/cnc/cnc_timelapse.mp4" type="video/mp4">
+            Your browser does not support mp4
+          </video>
+          -->
+
+          <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+          <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        <h3 class="myCaption">All of the 1" steel square tubing cut, bent, drilled and ready for welding.</h3>
+        <h3 class="myCaption">The frame after welding. Although I had done a decent bit of MIG welding before this, it was pretty stressful! The welds turned out fine.</h3>
+        <h3 class="myCaption">Another view of the full frame welded. The headtube has a 15 degree rake angle to allow easy steering and the rear wheel mounting utilizes dropouts for chain tensioning.</h3>
+        <h3 class="myCaption">The two pillow-blocks, sprocket and shaft after they were machined. The end of the sprocket was hexed to allow it to fit into the drill chuck. The pillow blocks support the shaft, and the sprocket is attatched via set screws.</h3>
+        <h3 class="myCaption">The frame assembly with wheels attached. The wheels, front fork and handlebars were the only off the shelf components.</h3>
+        <h3 class="myCaption">The full assembly. The purple 3D printed part holds a v-brake which is connected to a brake lever on the handlebars to depress the trigger. The drill is fixed to a custom 1/4" aluminum plate.</h3>
+      </div>
+
+      <div class="col-sm-5">
+        <h3 style="font-weight: bold; text-align:center;">About this project</h3>
+        <p>Component Design focuses on mechanical design, and all of the essential steps to creating a safe, functional design. The lectures in this class suplement the main project which is to design and build a drill powered vehicle, from scratch, to perform well in various challenges. Our team chose to compete in the endurance race, where the winner makes the most laps around a circuit before their bike stalls. We chose to build a two-wheeled scooter design to minimize weight. I did most of the design work in SolidWorks, and spent a ton of time in the machine shope cutting, bending, milling and welding various parts. Our team ended up placing second at the runoff!</p>
+      </div>
+
+      <script>
+        var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-60px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var cap = document.getElementsByClassName("myCaption");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+    cap[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+  cap[slideIndex-1].style.display = "block";
+}
+      </script>
+
+    </div>
+  </body>
+</html>
