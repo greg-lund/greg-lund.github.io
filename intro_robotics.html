@@ -29,17 +29,21 @@ body {
 
         <div class="w3-content w3-display-container">
           <img class="mySlides" src="projects/intro_robotics/robot.JPG" style="width:100%; border-radius: 15px" alt="">
-          <!--
-          <video class="mySlides" controls>
-            <source src="projects/cnc/cnc_timelapse.mp4" type="video/mp4">
+          <video class="mySlides" controls muted style="width:100%;height:auto;border-radius:15px">
+            <source src="projects/intro_robotics/robot_circle.mp4" type="video/mp4">
             Your browser does not support mp4
           </video>
-          -->
+          <video class="mySlides" controls muted style="width:100%;height:auto;border-radius:15px">
+            <source src="projects/intro_robotics/robot_track.mp4" type="video/mp4">
+            Your browser does not support mp4
+          </video>
 
           <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
           <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
         </div>
         <h3 class="myCaption">A top view of the mostly completed robot. A realsense camera is missing from the top left mount. The microcontroller is in the middle, arduino and breakout board for the drivers on the bottom.</h3>
+        <h3 class="myCaption">The first test of the robot's motor control. A message is published on a command velocity topic specifying both angular and linear velocity. The robot was being controlled via a laptop SSHed into the microcontroller.</h3>
+        <h3 class="myCaption">The first test of the reactive camera tracking system. An absolute position of an object with our selected color was estimated using the RealSense's color and depth data as well as the robots odometry.</h3>
       </div>
 
       <div class="col-sm-5">
