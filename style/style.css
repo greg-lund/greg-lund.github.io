@@ -127,7 +127,8 @@ img {
   position: fixed;
   top: 0;
   width: 100%;
-  display: block;
+  display: flex;
+  justify-content: space-around;
   transition: top 0.5s;
   z-index: 999;
   margin: 0 auto;
@@ -138,11 +139,10 @@ img {
   display: inline-block;
   color: #f2f2f2;
   text-align: center;
-  padding: 15px;
   text-decoration: none;
   font-size: 17px;
   transition:  0.5s ease;
-  margin-right:50px;
+  padding:15px;
 }
 
 #navbar a:hover {
