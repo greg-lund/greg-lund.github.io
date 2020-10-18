@@ -66,6 +66,8 @@ p {
   margin-bottom: 10px;
   font-size: 18px;
   color: #50555C;
+  text-align: justify;
+  text-justify: inter-word;
 }
 p a {
   color: #3377CC;

@@ -45,7 +45,7 @@ body {
         </div>
         <div class="col-sm-4" style="background-color:rbga(255,0,0,0.5)">
           <h3 style="font-weight: bold; text-align:center;">Square Wave</h3>
-          <p style="text-align:center; margin: 25px">A square wave is traced out by the sum of many rotating circles. As we only care about the y-component(or x-component) of the sum, a line is drawn horizontally from the smallest circle to show the function.
+          <p style="margin: 25px">A square wave is traced out by the sum of many rotating circles. As we only care about the y-component(or x-component) of the sum, a line is drawn horizontally from the smallest circle to show the function.
         </div>
       </div>
 
@@ -55,7 +55,7 @@ body {
         </div>
         <div class="col-sm-4" style="background-color:rbga(255,0,0,0.5)">
           <h3 style="font-weight: bold; text-align:center;">Ellipse</h3>
-          <p style="text-align:center; margin: 25px">This was the very first 2D drawing that I did, and although quite simple it showed that more complex paths were feasable</p>
+          <p style="margin: 25px">This was the very first 2D drawing that I did, and although quite simple it showed that more complex paths were feasable</p>
         </div>
       </div>
 
@@ -65,7 +65,7 @@ body {
         </div>
         <div class="col-sm-4" style="background-color:rbga(255,0,0,0.5)">
           <h3 style="font-weight: bold; text-align:center;">Square</h3>
-          <p style="text-align:center; margin: 25px">This was another 2D path I did before creating an SVG parser and re-sampler. This was also pretty simple to implement, but is perhaps more impressive. I personally find it super cool that such a discontinuous shape can be approximated so well with only 128 terms of the infinite series.</p>
+          <p style="margin: 25px">This was another 2D path I did before creating an SVG parser and re-sampler. This was also pretty simple to implement, but is perhaps more impressive. I personally find it super cool that such a discontinuous shape can be approximated so well with only 128 terms of the infinite series.</p>
         </div>
       </div>
 
@@ -76,13 +76,13 @@ body {
         </div>
         <div class="col-sm-4" style="background-color:rbga(255,0,0,0.5)">
           <h3 style="font-weight: bold; text-align:center;">Generalized SVG Tracing</h3>
-          <p style="text-align:center; margin: 25px">The goal of this project was to be able to trace arbitrary closed paths given in SVG format.</p>
+          <p style="margin: 25px">The goal of this project was to be able to trace arbitrary closed paths given in SVG format.</p>
         </div>
       </div>
 
       <div class="row justify-content-md-center">
-        <p style="text-align: center; margin: 25px">  When first starting the project, I figured the hardest part would be understanding the fft well enough to convert its output to these rotating circles. Although I spent a lot of time learning more about the fft, this part of the project didn't take nearly as long as creating a routine to parse and resample an arbitrary svg. In order to get a useful result out of the fft we need to supply it uniformly spaced points. This is made somewhat easier by SVG's parameterized curve definitions, namely cubic splines and lines, but there were still many obstacles to overcome such as sampling over arc-length and parsing. Parsing was the most tedious part of this project, and isn't something I would do again. I learned a lot from this project and got to implement some cool methods like numerical integration, graphics and animation, and learned a lot about JavaScript!</p>
-        <p style="text-align: center; margin: 25px">You can also check out the source code on my github repository, <a href="https://github.com/greg-lund/fft_svg_drawer" target="_blank">here</a>.</p>
+        <p style="margin: 25px">  When first starting the project, I figured the hardest part would be understanding the fft well enough to convert its output to these rotating circles. Although I spent a lot of time learning more about the fft, this part of the project didn't take nearly as long as creating a routine to parse and resample an arbitrary svg. In order to get a useful result out of the fft we need to supply it uniformly spaced points. This is made somewhat easier by SVG's parameterized curve definitions, namely cubic splines and lines, but there were still many obstacles to overcome such as sampling over arc-length and parsing. Parsing was the most tedious part of this project, and isn't something I would do again. I learned a lot from this project and got to implement some cool methods like numerical integration, graphics and animation, and learned a lot about JavaScript!</p>
+        <p style="margin: 25px">You can also check out the source code on my github repository, <a href="https://github.com/greg-lund/fft_svg_drawer" target="_blank">here</a>.</p>
 
       </div>
     </div>
