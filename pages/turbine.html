@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+    <title>Tesla Turbine</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="../images/gear.ico?v=2" type="image/x-icon">
+  </head>
+  <style>
+body {
+  background-color: #F5F5F5;
+}
+  </style>
+
+  <body>
+
+    <h1 style="text-align:center; margin-top: 80px; margin-bottom: 30px;">Tesla Turbine</h1>
+
+      <div id="navbar">
+      <a href="../index.html#home">Home</a>
+      <a href="../index.html#overview">About Me</a>
+      <a href="../index.html#research">Research</a>
+      <a href="../index.html#personal">Personal Projects</a>
+      <a href="../index.html#class">Class Projects</a>
+      <a href="../index.html#contact">Contact Me</a>
+      </div>
+
+    <div class="container">
+      <div class="col-sm-7">
+
+        <div class="w3-content w3-display-container">
+          <img class="mySlides" src="../projects/tesla_turbine/turbine_top.jpg" style="width:100%; border-radius: 15px">
+          <img class="mySlides" src="../projects/tesla_turbine/assembly.jpg"  alt ="" style="width:100%; border-radius: 15px">
+          <img class="mySlides" src="../projects/tesla_turbine/disk_jig.jpg"  alt ="" style="width:100%; border-radius: 15px">
+          <img class="mySlides" src="../projects/tesla_turbine/disks_finished.jpg"  alt ="" style="width:100%; border-radius: 15px">
+          <img class="mySlides" src="../projects/tesla_turbine/glue_up.jpg"  alt =" "style="width:100%; border-radius: 15px">
+          <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+          <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        <h3 class="myCaption">Full assembly view of the turbine. The casing is aluminum, inlet is brass and rotor is steel.</h3>
+        <h3 class="myCaption">Internal view of the turbine. The rotor consists of 12 individual disks, superglued to the ground shaft. The bearings are press fit, and the inlet comes in tangent to the outer diameter of the disks.</h3>
+        <h3 class="myCaption">A jig for drilling out the outlet holes. The disks were all placed within the jig, clamped down and drilled out on a drill press.</h3>
+        <h3 class="myCaption">Completed disks after drilling.</h3>
+        <h3 class="myCaption">Rotor assembly. The disks were sandwiched between thin spacers and superglued to the shaft.</h3>
+      </div>
+
+      <div class="col-sm-5">
+        <h3 style="font-weight:bold;text-align:center">About this project</h3>
+        <p style="margin:25px">This project served as my senior design project for the International Baccalaureate program at my high school. Over the course of a few months, I researched and built a fully functional turbine from scratch. The design is not conventional and uses parallel, flat disks to convert a high pressure into rotational energy. There were aluminum, brass and steel components that were all machined by hand. I used a mini metal lathe from Harbor Freight, and a cheap drill press to do all of the machining. I tested the turbine with compressed air, and was able to reach speeds in excess of 90,000 rpm at just 40 PSI. This project served as a great intro to machining, and I certainly learned a lot!</p>
+      </div>
+
+      <script>
+        var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-80px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+        var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var cap = document.getElementsByClassName("myCaption");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+    cap[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+  cap[slideIndex-1].style.display = "block";
+}
+      </script>
+
+    </div>
+  </body>
+</html>

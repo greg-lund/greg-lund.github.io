@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+    <title>Bouldering Wall</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="../images/gear.ico?v=2" type="image/x-icon">
+  </head>
+  <style>
+body {
+  background-color: #F5F5F5;
+}
+  </style>
+
+  <body>
+
+    <h1 style="text-align:center; margin-top: 80px; margin-bottom: 30px; font-weight: bold;">Bouldering Wall</h1>
+
+      <div id="navbar">
+      <a href="../index.html#home">Home</a>
+      <a href="../index.html#overview">About Me</a>
+      <a href="../index.html#research">Research</a>
+      <a href="../index.html#personal">Personal Projects</a>
+      <a href="../index.html#class">Class Projects</a>
+      <a href="../index.html#contact">Contact Me</a>
+      </div>
+
+    <div class="container">
+      <div class="col-sm-7">
+
+        <div class="w3-content w3-display-container">
+          <img class="mySlides" src="../projects/bouldering_wall/final.JPG" style="width:100%; border-radius: 15px" alt="">
+          <img class="mySlides" src="../projects/bouldering_wall/initial_materials.JPG" style="width:100%; border-radius: 15px" alt="">
+          <img class="mySlides" src="../projects/bouldering_wall/holes_drilled.JPG" style="width:100%; border-radius: 15px" alt="">
+          <img class="mySlides" src="../projects/bouldering_wall/frame_assembly.JPG" style="width:100%; border-radius: 15px" alt="">
+          <img class="mySlides" src="../projects/bouldering_wall/half_panels.JPG" style="width:100%; border-radius: 15px" alt="">
+          <img class="mySlides" src="../projects/bouldering_wall/all_panels.JPG" style="width:100%; border-radius: 15px" alt="">
+          <img class="mySlides" src="../projects/bouldering_wall/kicker.JPG" style="width:100%; border-radius: 15px" alt="">
+          <img class="mySlides" src="../projects/bouldering_wall/final_down.JPG" style="width:100%; border-radius: 15px" alt="">
+          <!--
+          <video class="mySlides" controls>
+            <source src="projects/cnc/cnc_timelapse.mp4" type="video/mp4">
+            Your browser does not support mp4
+          </video>
+          -->
+
+          <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+          <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        <h3 class="myCaption">The finished bouldering wall setup in my backyard. Some of the holds are homemade but most are commercial.</h3>
+        <h3 class="myCaption">The raw materials for the wall. 3 sheets of 3/4" OSB and a bunch of 2x4's and 2x6's.</h3>
+        <h3 class="myCaption">All of the holes drilled for the T-nuts. I could stack the panels together and drill all the holes once.</h3>
+        <h3 class="myCaption">Initial frame assembly. I used strong ties to do the inner joints and just screwed the 2x4's in on the sides.</h3>
+        <h3 class="myCaption">Laying down the panels. I painted both sides of the panels to protect them, then hammered in all the T-nuts before this.</h3>
+        <h3 class="myCaption">All of the panels screwed down to the frame, I went a little overboard with the screws.</h3>
+        <h3 class="myCaption">The kicker board frame was added. I used some flat plate ties for the sides.</h3>
+        <h3 class="myCaption">The full assembly completed, just not upright. It took 4 of us to move the wall, but flipping it upright was suprisingly easy. I painted the frame after it was in the final spot.</h3>
+      </div>
+
+      <div class="col-sm-5">
+        <h3 style="font-weight: bold; text-align:center;">About this project</h3>
+        <p>Unable to climb in the gym, I decided it would be cool to have the ability to train at home. This project ended up being a little more expensive than I would have liked, but I gained some experience with framing and mold making for custom climbing holds. It ended up being pretty sturdy and really fun to climb on!</p>
+      </div>
+
+      <script>
+        var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-80px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var cap = document.getElementsByClassName("myCaption");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+    cap[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+  cap[slideIndex-1].style.display = "block";
+}
+      </script>
+
+    </div>
+  </body>
+</html>

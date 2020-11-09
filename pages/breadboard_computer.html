@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+    <title>Breadboard Computer</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="../images/gear.ico?v=2" type="image/x-icon">
+  </head>
+  <style>
+body {
+  background-color: #F5F5F5;
+}
+  </style>
+
+  <body>
+
+    <h1 style="text-align:center; margin-top: 80px; margin-bottom: 30px; font-weight: bold;">Breadboard Computer</h1>
+
+      <div id="navbar">
+      <a href="../index.html#home">Home</a>
+      <a href="../index.html#overview">About Me</a>
+      <a href="../index.html#research">Research</a>
+      <a href="../index.html#personal">Personal Projects</a>
+      <a href="../index.html#class">Class Projects</a>
+      <a href="../index.html#contact">Contact Me</a>
+      </div>
+
+    <div class="container">
+      <div class="col-sm-7">
+
+        <div class="w3-content w3-display-container">
+          <img class="mySlides" src="../projects/breadboard_computer/full_computer_on.JPG" style="width:100%; border-radius: 15px" alt="">
+          <img class="mySlides" src="../projects/breadboard_computer/clock.JPG" style="width:100%; border-radius: 15px" alt="">
+          <img class="mySlides" src="../projects/breadboard_computer/alu.JPG" style="width:100%; border-radius: 15px" alt="">
+          <img class="mySlides" src="../projects/breadboard_computer/alu_testing.JPG" style="width:100%; border-radius: 15px" alt="">
+          <img class="mySlides" src="../projects/breadboard_computer/right_half.JPG" style="width:100%; border-radius: 15px" alt="">
+          <img class="mySlides" src="../projects/breadboard_computer/mostly_done.JPG" style="width:100%; border-radius: 15px" alt="">
+          <img class="mySlides" src="../projects/breadboard_computer/full_computer_off.JPG" style="width:100%; border-radius: 15px" alt="">
+
+          <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+          <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        <h3 class="myCaption">The completed computer, powered and running a simple program</h3>
+        <h3 class="myCaption">The first module that I built was the clock module. Three 555 timers were used to create the actual clock signal, to switch between manual clock pulses and auto and to debounce the manual clock input.</h3>
+        <h3 class="myCaption">This is the arithmetic logic unit(ALU) along with the two registers. The ALU can only perform addition and subtraction. The ALU is in the center with the registers above and below.</h3>
+        <h3 class="myCaption">Testing the ALU on manual inputs.</h3>
+        <h3 class="myCaption">The right half of the computer mostly done. The program counter is on top, registers and ALU below, and the output register and display below that.</h3>
+        <h3 class="myCaption">Here the computer is mostly completed. The memory address register, RAM, and instruction register have been added on the left. The system bus is in the middle. All that is missing here is the control logic.</h3>
+        <h3 class="myCaption">The completed computer. Its hard to tell in a photo, but the computer is really large. The entire building proccess easily took over 100 hours.</h3>
+      </div>
+
+      <div class="col-sm-5">
+        <h3 style="font-weight: bold; text-align:center;">About this project</h3>
+        <p>This is a project that I started a few years ago, but ended up finishing in the Fall of 2020. After taking a computer systems class for my degree, I got really interested in the low level digital logic that makes computers work. The design for this computer is not my own, and a lot more information can be found on <a href="https://eater.net/8bit" target="_blank">Ben Eater's page</a>. </p>
+        <p>I started by using transistors to create common logic gates, like AND, OR, NOT, NOR, NAND etc, and moved to use more compact integrated circuits to perform logic. I built a wide range of more complex circuits from discrete logic gates, such as S-R latches, J-K flip flops, D flip flops as memory registers, counters, adders and demultiplexers.</p>
+        <p>A common theme in this project was to first build a component component from scratch, such as a 1-bit register, and then use a integrated circuit to replace it once I understood how it works. The end result is an 8 bit computer that can be manually programmed through its 16 byte RAM to add, subtract, store and output data. Although I didn't design this computer myself and had a lot of resources to look to, I feel like I learned more than I would have in a semester long digital logic class.</p>
+      </div>
+
+      <script>
+        var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-80px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var cap = document.getElementsByClassName("myCaption");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+    cap[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+  cap[slideIndex-1].style.display = "block";
+}
+      </script>
+
+    </div>
+  </body>
+</html>

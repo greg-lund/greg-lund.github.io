@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+    <title>Miscellaneous Projects</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="../images/gear.ico?v=2" type="image/x-icon">
+  </head>
+  <style>
+body {
+  background-color: #F5F5F5;
+}
+  </style>
+
+  <body>
+
+    <h1 style="text-align:center; margin-top: 80px; margin-bottom: 30px; font-weight: bold;">Miscellaneous Projects</h1>
+
+      <div id="navbar">
+      <a href="../index.html#home">Home</a>
+      <a href="../index.html#overview">About Me</a>
+      <a href="../index.html#research">Research</a>
+      <a href="../index.html#personal">Personal Projects</a>
+      <a href="../index.html#class">Class Projects</a>
+      <a href="../index.html#contact">Contact Me</a>
+      </div>
+
+    <div class="container">
+      <div class="col-sm-7">
+
+        <div class="w3-content w3-display-container">
+          <img class="mySlides" src="../projects/misc/tesla_coil.JPG" style="width:100%; border-radius: 15px" alt="">
+          <img class="mySlides" src="../projects/misc/guitar.JPG" style="width:100%; border-radius: 15px" alt="">
+          <img class="mySlides" src="../projects/misc/model_airplane.JPG" style="width:100%; border-radius: 15px" alt="">
+          <img class="mySlides" src="../projects/misc/speaker.JPG" style="width:100%; border-radius: 15px" alt="">
+          <img class="mySlides" src="../projects/misc/subwoofer.JPG" style="width:100%; border-radius: 15px" alt="">
+          <img class="mySlides" src="../projects/misc/hangboard.JPG" style="width:100%; border-radius: 15px" alt="">
+
+          <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+          <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        <h3 class="myCaption">This is a simple solid state Tesla Coil that I built. The secondary coil has around 1000 turns and the driver circuit is a simple Slayer-Exciter circuit. It was able to produce decent arcs!</h3>
+        <h3 class="myCaption">This is a guitar that I put together in high school. I made the body out of maple, but all of the other components were purchased.</h3>
+        <h3 class="myCaption">This is one of many model airplanes that I have built over the years. This one was designed by FliteTest and flew very well!</h3>
+        <h3 class="myCaption">This is a bluetooth speaker cabinet that I built. The cabinet was made from MDF, and the top was covered in synthetic leather.</h3>
+        <h3 class="myCaption">This is a subwoofer cabinet that I made. I did all the volume and port size calculations for the specifications of the driver and cut out the panels on my CNC router.</h3>
+        <h3 class="myCaption">This was another CNC project, and is a simple hangboard for training rock climbing strength. I'm applying finish in this shot.</h3>
+      </div>
+
+      <div class="col-sm-5">
+        <h3 style="font-weight: bold; text-align:center;">About these projects</h3>
+        <p style="text-align: center; margin: 15px;">I thought these projects were worth mentioning, but I either did not document them very well or they were too small to warrant their own page.</p>
+      </div>
+
+      <script>
+        var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-80px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var cap = document.getElementsByClassName("myCaption");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+    cap[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+  cap[slideIndex-1].style.display = "block";
+}
+      </script>
+
+    </div>
+  </body>
+</html>

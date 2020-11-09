@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+    <title>Intro to Robotics</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="../images/gear.ico?v=2" type="image/x-icon">
+  </head>
+  <style>
+body {
+  background-color: #F5F5F5;
+}
+  </style>
+
+  <body>
+
+    <h1 style="text-align:center; margin-top: 80px; margin-bottom: 30px; font-weight: bold;">Intro to Robotics Final Project</h1>
+
+
+      <div id="navbar">
+      <a href="../index.html#home">Home</a>
+      <a href="../index.html#overview">About Me</a>
+      <a href="../index.html#research">Research</a>
+      <a href="../index.html#personal">Personal Projects</a>
+      <a href="../index.html#class">Class Projects</a>
+      <a href="../index.html#contact">Contact Me</a>
+      </div>
+    <div class="container">
+      <div class="col-sm-7">
+
+        <div class="w3-content w3-display-container">
+          <img class="mySlides" src="../projects/intro_robotics/robot.JPG" style="width:100%; border-radius: 15px" alt="">
+          <video class="mySlides" autoplay muted loop style="width:100%;height:auto;border-radius:15px">
+            <source src="../projects/intro_robotics/robot_circle.mp4" type="video/mp4">
+            Your browser does not support mp4
+          </video>
+          <video class="mySlides" autoplay muted loop style="width:100%;height:auto;border-radius:15px">
+            <source src="../projects/intro_robotics/robot_track.mp4" type="video/mp4">
+            Your browser does not support mp4
+          </video>
+
+          <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+          <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        <h3 class="myCaption">A top view of the mostly completed robot. A realsense camera is missing from the top left mount. The microcontroller is in the middle, arduino and breakout board for the drivers on the bottom.</h3>
+        <h3 class="myCaption">The first test of the robot's motor control. A message is published on a command velocity topic specifying both angular and linear velocity. The robot was being controlled via a laptop SSHed into the microcontroller.</h3>
+        <h3 class="myCaption">The first test of the reactive camera tracking system. An absolute position of an object with our selected color was estimated using the RealSense's color and depth data as well as the robots odometry.</h3>
+      </div>
+
+      <div class="col-sm-5">
+        <h3 style="font-weight: bold; text-align:center;">About this project</h3>
+        <p>CSCI 3302: Intro to Robotics is a survery course covering a wide variety of topics in robotics from odometry and mapping to machine learning and computer vision. The culmination of this course was a very open ended group project. </p>
+        <p>Our group decided to attempt to create an autonomous robot, inspired by the battlebot Chomp. The end goal was to have a platform that could locate and track an opposing robot, and deploy an arm onto it as a battlebot would. </p>
+        <p>I tackled all the hardware for this project, including the electronics. I also helped with the lower level motor control in ROS as well as camera tracking. The arduino handled all of the motor control and encoder reading, and communicated to the microprocessor via ROS Serial. In the end we used the RealSense's RGB data to identify a certain colored object via color filtering and used a reactive system to follow said object. We would have liked to implement full tracking of the object and path planning to intercept it, but we simply ran out of time.</p>
+      </div>
+
+      <script>
+        var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-80px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var cap = document.getElementsByClassName("myCaption");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+    cap[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+  cap[slideIndex-1].style.display = "block";
+}
+      </script>
+
+    </div>
+  </body>
+</html>
