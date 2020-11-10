@@ -33,7 +33,10 @@ body {
       <div class="col-sm-7">
 
         <div class="w3-content w3-display-container">
-          <img class="mySlides" src="../projects/arpg/social_navigation/gym_env.png" style="width:100%; border-radius: 15px" alt="">
+          <video class="mySlides" style="width: 100%;height:auto;border-radius: 15px" autoplay muted loop>
+            <source src="../projects/arpg/social_navigation/gym_sim.mp4" type="video/mp4">
+            Your browser does not support mp4
+          </video>
           <video class="mySlides" style="width: 100%;height:auto;border-radius: 15px" autoplay muted loop>
             <source src="../projects/arpg/social_navigation/best_sensor.mp4" type="video/mp4">
             Your browser does not support mp4
@@ -41,7 +44,7 @@ body {
           <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
           <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
         </div>
-        <h3 class="myCaption">This is a simple simulation I made, where the circles are people walking taken from the ETH Pedestrian Dataset, and our goal is to navigate the space efficiently, and without collisions. Our robot is the yellow star, and we try to stay as close to the green path while avoiding human obstacles. This will be extended to add reactive human behavior based on the position of the robot.</h3>
+        <h3 class="myCaption">This is a simple simulation environment I made, where the circles are people walking taken from the ETH Pedestrian Dataset, and our goal is to navigate the space efficiently, and without collisions. Our robot is the black star, and we try to stay as close to the green path while avoiding human obstacles. Seen here, the robot is just taking random actions. I built the environment on top of OpenAI Gym making it very nice to interface with for Deep RL, which is currently in the works.</h3>
         <h3 class="myCaption">I spent a portion of this past summer implementing RRTX, an asymptotically optimal, sampling based planning and replanning algorithm. We build a dense graph through our state space, find the minimum cost path to goal and update the wiring based on obstacles and future obstacle predictions. This is a simple test, running in real time, of a robot that updates its path when new obstacles are discovered.</h3>
       </div>
 
