@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+    <title>Sprinter Van</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="../images/gear.ico?v=2" type="image/x-icon">
+  </head>
+  <style>
+body {
+  background-color: #F5F5F5;
+}
+  </style>
+
+  <body>
+
+    <h1 style="text-align:center; margin-top: 80px; margin-bottom: 30px; font-weight: bold;">Sprinter Van</h1>
+
+      <div id="navbar">
+      <a href="../index.html#home">Home</a>
+      <a href="../index.html#overview">About Me</a>
+      <a href="../index.html#research">Research</a>
+      <a href="../index.html#personal">Personal Projects</a>
+      <a href="../index.html#class">Class Projects</a>
+      <a href="../index.html#contact">Contact Me</a>
+      </div>
+
+    <div class="container">
+      <div class="col-sm-7">
+
+        <div class="w3-content w3-display-container">
+          <img class="mySlides" src="../projects/van/finished_side.jpeg" style="width:100%; border-radius: 15px" alt="">
+          <img class="mySlides" src="../projects/van/finished_rear.jpeg" style="width:100%; border-radius: 15px" alt="">
+          <img class="mySlides" src="../projects/van/empty.JPG" style="width:100%; border-radius: 15px" alt="">
+          <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+          <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        <h3 class="myCaption">The completed van, up in the Bridger Mountains.</h3>
+        <h3 class="myCaption">A view of the back of the van with our bed raised up high to give lots of storage underneath. Having our bikes fit underneath was a design consideration here.</h3>
+        <h3 class="myCaption">The shell of the interior after we pulled out all the seats, headliner, AC unit etc.</h3>
+        <h3 class="myCaption"></h3>
+      </div>
+
+      <div class="col-sm-5">
+        <h3 style="font-weight: bold; text-align:center;">About this project</h3>
+        <p>My partner and I spent most of our free time (COVID-era) in the latter half of our Senior year of college building out this 2004 Dodge Sprinter. My partner found a killer deal on this old passenger van that had just been sitting in a lot for many years (low miles too!). As is standard with many of my larger scale projects, this one took much longer than anticipated and in hindsight we should've spent less time and gotten on the road sooner. </p>
+        <p>This project had a great combination of processes, and a highlight was building a big battery pack from recycled laptops.</p>
+      </div>
+
+      <script>
+        var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-80px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var cap = document.getElementsByClassName("myCaption");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+    cap[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+  cap[slideIndex-1].style.display = "block";
+}
+      </script>
+
+    </div>
+  </body>
+</html>
